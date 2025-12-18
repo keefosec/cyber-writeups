@@ -14,7 +14,9 @@ Target IP: 10.129.37.146
 Started with a full port scan:
 
 ```bash
-nmap -sV -A 10.129.37.146 <img width="1911" height="771" alt="Screenshot 2025-12-18 000604" src="https://github.com/user-attachments/assets/73ca00a1-095f-4683-9d56-4dc713b7824d" /> 
+nmap -sV -A 10.129.37.146 <img width="1919" height="349" alt="Screenshot 2025-12-18 000529" src="https://github.com/user-attachments/assets/19bd6745-bb63-49a1-8ae8-b367bc587f06" />
+
+<img width="1911" height="771" alt="Screenshot 2025-12-18 000604" src="https://github.com/user-attachments/assets/73ca00a1-095f-4683-9d56-4dc713b7824d" /> 
 ping 10.129.37.146 <img width="1001" height="414" alt="image" src="https://github.com/user-attachments/assets/e8596b54-9466-42f3-91bd-809fddf85dab" />
 
 Enumeration
