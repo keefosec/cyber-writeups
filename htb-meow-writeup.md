@@ -14,15 +14,14 @@ Target IP: 10.129.37.146
 Started with a full port scan:
 
 ```bash
-nmap -sV -A 10.129.37.146 <img width="1919" height="349" alt="Screenshot 2025-12-18 000529" src="https://github.com/user-attachments/assets/19bd6745-bb63-49a1-8ae8-b367bc587f06" />
-
-<img width="1911" height="771" alt="Screenshot 2025-12-18 000604" src="https://github.com/user-attachments/assets/73ca00a1-095f-4683-9d56-4dc713b7824d" /> 
-ping 10.129.37.146 <img width="1001" height="414" alt="image" src="https://github.com/user-attachments/assets/e8596b54-9466-42f3-91bd-809fddf85dab" />
+nmap -sV -A 10.129.37.146 ![Nmap Scan Results](https://raw.githubusercontent.com/keefosec/cyber-writeups/main/nmap.png) 
+ 
+ping 10.129.37.146 ![Ping Scan](https://raw.githubusercontent.com/keefosec/cyber-writeups/main/ping%20scan.png)
 
 Enumeration
 I'd attempted common usernames such as admin, administrator, etc with no luck until noticing a potential hint in the nmap output or service banner (or telnet test).
 Telnet to port 23 revealed a login prompt with "root" and a message hinting at the password.
-<img width="1911" height="788" alt="Screenshot 2025-12-18 004022" src="https://github.com/user-attachments/assets/c7730698-3edd-462f-9510-932751ac0bd9" />
+![Telnet Login](https://raw.githubusercontent.com/keefosec/cyber-writeups/main/telnet-login.png)
 
 ## Initial Access & Flags
 I Connected via telnet to port 23 using the credentials from the login banner.
@@ -33,7 +32,7 @@ Once inside, I was already root. Ran the `ls` command in the root directory and 
 
 ```bash
 cat flag.txt
-Captured the flag "b40abdfe23665f766f9c61ecba8a4c19" <img width="986" height="261" alt="image" src="https://github.com/user-attachments/assets/b0c97397-5ea2-4d9c-9091-d317dfdcb2cd" />
+Captured the flag "b40abdfe23665f766f9c61ecba8a4c19" ![Flag Output](https://raw.githubusercontent.com/keefosec/cyber-writeups/main/flag-meow.png)
 This revealed the root flag — completing the box.
 
 Key Takeaways:
