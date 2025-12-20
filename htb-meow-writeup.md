@@ -32,7 +32,7 @@ Once inside, I was already root. Ran the `ls` command in the root directory and 
 
 ```bash
 cat flag.txt
-Captured the flag "b40abdfe23665f766f9c61ecba8a4c19" ![Flag Output](flag-meow.png)
+Captured the flag "b40abdfe23665f766f9c61ecba8a4c19" ![Flag Output](images/flag-meow.png)
 This revealed the root flag — completing the box.
 
 Key Takeaways:
