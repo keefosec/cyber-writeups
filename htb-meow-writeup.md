@@ -14,13 +14,13 @@ Target IP: 10.129.37.146
 Started with a full port scan:
 
 ```bash
-nmap -sV -A 10.129.37.146 ![Nmap Scan Results](images/nmap scan.png) 
+nmap -sV -A 10.129.37.146 ![Nmap Scan Results](images/nmap-scan.png)
  
-ping 10.129.37.146 ![Ping Scan](images/ping scan.png)
+ping 10.129.37.146 ![Ping Scan](images/ping-scan.png)
 
 Enumeration
-I'd attempted common usernames such as admin, administrator, etc with no luck until noticing a potential hint in the nmap output or service banner (or telnet test).
-Telnet to port 23 revealed a login prompt with "root" and a message hinting at the password.
+Common usernames such as `admin` and `administrator` were tested without success. Further inspection of the Telnet service banner revealed a hint indicating the correct credentials.
+
 ![Telnet Login](images/telnet-login.png)
 
 ## Initial Access & Flags
