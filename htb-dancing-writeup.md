@@ -14,32 +14,31 @@ Target IP: 10.129.21.151
 Started with a full port scan:
 
 ```bash
-nmap -sV -A 10.129.21.151: ![Nmap Scan Results]
+nmap -sV -A 10.129.21.151: ![Nmap Scan Results](https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/nmap-scandancing.png)
+(https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/nmap2-dancing.png)
 Key finding: Port 445 open with SMB service.
 
 Enumeration
-Listed available SMB shares anonymously: ![SMB Shares]
+Listed available SMB shares anonymously: ![SMB Shares](https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/smbclient-list.png)
 smbclient -L //10.129.21.151
 
 Discovered the WorkShares share was accessible without credentials.
 SMB Shares Listed: 
 
 Initial Access
-Connected to the open share: ![SMB Shares]
+Connected to the open share: ![SMB Shares](https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/anonymous-login.png)
 smbclient //10.129.21.151/WorkShares
 
 Flags
 
-Navigated directories and located the flag file.
+Navigated directories and located the flag file. ![Directory Listing](https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/smb-share-ls.png)
 ls
 get flag.txt
 Directory Listing with Flag
 Exited and viewed locally:
 cat flag.txt
-
-Downloaded and viewed the flag locally: ![Flag Output]
+Downloaded and viewed the flag locally: ![Flag Output](https://github.com/keefosec/cyber-writeups/blob/d65fad33c2c202633bb12f04cc28ef97dcd7d86a/cat-flag-dancing.png)
 cat flag.txt
-
 
 Key Takeaways
 
